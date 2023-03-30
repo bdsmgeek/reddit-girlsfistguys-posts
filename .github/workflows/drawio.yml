@@ -31,7 +31,7 @@ jobs:
       - name: Export DrawIO to SVG
         uses: severgroup-tt/actions-drawio-cli@v1.0.0
         with:
-          source:: girlsfistguys-diagram.drawio
+          source: girlsfistguys-diagram.drawio
           destination: girlsfistguys-diagram.svg
           
           
