@@ -31,10 +31,10 @@ jobs:
       - name: actions-drawio
         uses: Burnett01/actions-drawio@1.2
         with:
-          # Input file
+          scale: 2.5
           src: girlsfistguys-diagram.drawio
-          # Output file
           dest: girlsfistguys-diagram.svg
+          
           
       - name: Add & Commit
         uses: EndBug/add-and-commit@v9.1.1
