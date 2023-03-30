@@ -37,7 +37,7 @@ jobs:
           # Check if "$f" FILE exists and is a regular file and then only copy it #
             if [ -f "$f" ]
             then
-               drawio -x -f svg -o $f.svg $f
+               drawio --no-sandbox -x -f svg -o $f.svg $f
             else
               echo "Warning: Some problem with \"$f\""
             fi
