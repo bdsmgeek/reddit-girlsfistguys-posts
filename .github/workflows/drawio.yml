@@ -34,6 +34,13 @@ jobs:
           source: girlsfistguys-diagram.drawio
           destination: girlsfistguys-diagram.svg
           
+      - name: Export DrawIO to PNG
+        uses: severgroup-tt/actions-drawio-cli@v1.0.0
+        with:
+          source: girlsfistguys-diagram.drawio
+          destination: girlsfistguys-diagram.png
+          format: png
+          
           
       - name: Add & Commit
         uses: EndBug/add-and-commit@v9.1.1
