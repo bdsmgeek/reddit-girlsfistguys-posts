@@ -6,3 +6,5 @@
 4. [Post to Subreddit](https://www.reddit.com/r/GirlsFistGuys/submit?url)
 
 [Edit Diagram](https://app.diagrams.net/#Hbdsmgeek%2Freddit-girlsfistguys-posts%2Fmain%2Fgirlsfistguys-diagram.drawio)
+
+![diagram](girlsfistguys-diagram.svg)
