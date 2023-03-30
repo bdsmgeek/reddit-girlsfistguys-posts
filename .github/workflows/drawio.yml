@@ -28,12 +28,11 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
       
-      - name: actions-drawio
-        uses: Burnett01/actions-drawio@1.2
+      - name: Export DrawIO to SVG
+        uses: severgroup-tt/actions-drawio-cli@v1.0.0
         with:
-          scale: 2.5
-          src: girlsfistguys-diagram.drawio
-          dest: girlsfistguys-diagram.svg
+          source:: girlsfistguys-diagram.drawio
+          destination: girlsfistguys-diagram.svg
           
           
       - name: Add & Commit
