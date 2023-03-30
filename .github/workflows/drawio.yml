@@ -26,26 +26,13 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
       
-      - name: Install Drawio Desktop
-        run: |
-          sudo snap install drawio
-
-      # Runs a set of commands using the runners shell
-      - name: Export Drawio to Svg
-        run: |
-          Xvfb -ac :99 -screen 0 1280x1024x16 & export DISPLAY=:99
-          FILES="*.drawio"
-          for f in $FILES
-          do
-          # FAILSAFE #
-          # Check if "$f" FILE exists and is a regular file and then only copy it #
-            if [ -f "$f" ]
-            then
-               xvfb-run --auto-servernum drawio --no-sandbox -x -f svg -o $f.svg $f
-            else
-              echo "Warning: Some problem with \"$f\""
-            fi
-          done
+      - name: actions-drawio
+        uses: Burnett01/actions-drawio@1.2
+        with:
+          # Input file
+          src: girlsfistguys-diagram.drawio
+          # Output file
+          dest: girlsfistguys-diagram.svg
           
       - name: Add & Commit
         uses: EndBug/add-and-commit@v9.1.1
